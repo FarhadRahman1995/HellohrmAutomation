@@ -5,13 +5,13 @@
         "type": "node",
         "request": "launch",
         "name": "Mocha Tests",
-        "program": "E:/Javascript Selenium Automation/Hellohrm Automation/node_modules/mocha/bin/_mocha",
+        "program": "${E:/Javascript Selenium Automation/Hellohrm Automation}/test/login-page-test.js",
         "args": [
           "--timeout",
           "10000",
           "--ui",
           "bdd",
-          "sample-test.js"
+          "login-page-test.js"
         ],
         "internalConsoleOptions": "openOnSessionStart"
       }

@@ -1,4 +1,11 @@
 const { By, Key, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
+
+async function main() {
+  const driver = await new Builder().forBrowser('chrome').build();
+async function sleep(ms) {
+    await new Promise(resolve => setTimeout(resolve, ms));
+  }
 
 class LoginPage {
   constructor(driver) {
@@ -23,5 +30,9 @@ class LoginPage {
     await this.driver.wait(until.urlIs(this.url), 10000);
   }
 }
+
+}
+
+main();
 
 module.exports = LoginPage;
